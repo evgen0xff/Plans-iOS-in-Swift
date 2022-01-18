@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserImageCell" id="Smp-ny-7cZ" customClass="UserImageCell" customModule="Plans" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="Y5M-hX-uSC">
+                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="Wek-hG-Rcn"/>
+                            <constraint firstAttribute="width" secondItem="Y5M-hX-uSC" secondAttribute="height" multiplier="1:1" id="p79-yw-qqg"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_ling_live" translatesAutoresizingMaskIntoConstraints="NO" id="gTF-BR-YG5">
+                        <rect key="frame" x="2" y="2" width="46" height="46"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="gTF-BR-YG5" secondAttribute="height" multiplier="1:1" id="IAn-3R-j6F"/>
+                            <constraint firstAttribute="width" constant="46" id="YsC-wo-36R"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="vyO-ok-YDe"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="gTF-BR-YG5" firstAttribute="centerY" secondItem="Smp-ny-7cZ" secondAttribute="centerY" id="8sE-DA-iwB"/>
+                <constraint firstItem="gTF-BR-YG5" firstAttribute="centerX" secondItem="Smp-ny-7cZ" secondAttribute="centerX" id="HIn-dS-PKr"/>
+                <constraint firstItem="Y5M-hX-uSC" firstAttribute="centerX" secondItem="Smp-ny-7cZ" secondAttribute="centerX" id="aOG-71-EhB"/>
+                <constraint firstItem="Y5M-hX-uSC" firstAttribute="centerY" secondItem="Smp-ny-7cZ" secondAttribute="centerY" id="myp-KG-O9N"/>
+            </constraints>
+            <size key="customSize" width="106" height="108"/>
+            <connections>
+                <outlet property="imgvLing" destination="gTF-BR-YG5" id="Tt5-DQ-Evu"/>
+                <outlet property="imgvUser" destination="Y5M-hX-uSC" id="6HC-M9-Kst"/>
+            </connections>
+            <point key="canvasLocation" x="196.80000000000001" y="188.00599700149925"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_ling_live" width="44" height="44"/>
+        <image name="ic_user_placeholder" width="40" height="40"/>
+    </resources>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProductSans-Regular.ttf">
+            <string>ProductSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="CountLabelCell" id="gTV-IL-0wX" customClass="CountLabelCell" customModule="Plans" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_users_circle_green" translatesAutoresizingMaskIntoConstraints="NO" id="WSw-xD-dqu">
+                        <rect key="frame" x="5" y="5" width="40" height="40"/>
+                        <color key="backgroundColor" name="Color_Teal_Main"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="TMx-ZE-YgK"/>
+                            <constraint firstAttribute="width" secondItem="WSw-xD-dqu" secondAttribute="height" multiplier="1:1" id="v0o-Ov-YpE"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AiT-ef-o8L">
+                        <rect key="frame" x="12.5" y="15.5" width="25" height="17.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="AuR-Mc-tJM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="15"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="WSw-xD-dqu" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="XRf-cB-oRG"/>
+                <constraint firstItem="AiT-ef-o8L" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="XXR-ep-GUO"/>
+                <constraint firstItem="AiT-ef-o8L" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" constant="-1" id="ZeP-vl-3SO"/>
+                <constraint firstItem="WSw-xD-dqu" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ljO-kQ-BxR"/>
+            </constraints>
+            <size key="customSize" width="46" height="49"/>
+            <connections>
+                <outlet property="backgroundImgView" destination="WSw-xD-dqu" id="Og5-IS-YBl"/>
+                <outlet property="countLabel" destination="AiT-ef-o8L" id="aRN-Z5-xJI"/>
+            </connections>
+            <point key="canvasLocation" x="134.78260869565219" y="125.89285714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ic_users_circle_green" width="40" height="40"/>
+        <namedColor name="Color_Teal_Main">
+            <color red="0.21960783004760742" green="0.63921570777893066" blue="0.60392159223556519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

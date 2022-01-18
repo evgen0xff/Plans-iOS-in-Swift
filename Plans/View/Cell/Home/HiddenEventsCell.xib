@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="ProductSans-Regular.ttf">
+            <string>ProductSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="HiddenEventsCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="HiddenEventsCell" rowHeight="74" id="KGk-i7-Jjw" customClass="HiddenEventsCell" customModule="Plans" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nWh-gs-Tu5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2nr-Cu-xPZ">
+                                <rect key="frame" x="15" y="16" width="290" height="45"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="hUp-cU-c2c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ProductSans-Regular" family="Product Sans" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                <state key="normal" title="Hidden Events (2)">
+                                    <color key="titleColor" name="Color_Teal_Main"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="actionHiddenEvents:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="9Rc-4L-vhc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2nr-Cu-xPZ" secondAttribute="bottom" constant="16" id="Jhg-Ic-awd"/>
+                            <constraint firstItem="2nr-Cu-xPZ" firstAttribute="top" secondItem="nWh-gs-Tu5" secondAttribute="top" constant="16" id="KGx-KD-v3y"/>
+                            <constraint firstItem="2nr-Cu-xPZ" firstAttribute="leading" secondItem="nWh-gs-Tu5" secondAttribute="leading" constant="15" id="wVy-cw-1if"/>
+                            <constraint firstAttribute="trailing" secondItem="2nr-Cu-xPZ" secondAttribute="trailing" constant="15" id="yCu-zS-kzO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="nWh-gs-Tu5" secondAttribute="bottom" id="3oT-Sa-zsB"/>
+                    <constraint firstAttribute="trailing" secondItem="nWh-gs-Tu5" secondAttribute="trailing" id="Joo-8C-qde"/>
+                    <constraint firstItem="nWh-gs-Tu5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="tvE-ON-tiu"/>
+                    <constraint firstItem="nWh-gs-Tu5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yVV-8y-bKe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="btnHiddenEvents" destination="2nr-Cu-xPZ" id="4j9-um-KfI"/>
+            </connections>
+            <point key="canvasLocation" x="140.57971014492756" y="119.19642857142857"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="Color_Teal_Main">
+            <color red="0.21960783004760742" green="0.63921570777893066" blue="0.60392159223556519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

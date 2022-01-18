@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerView" customModule="Plans" customModuleProvider="target">
+            <connections>
+                <outlet property="datepicker" destination="KTU-sK-aI3" id="tAn-gc-zsT"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3T-pD-7tP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfP-YY-THZ">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="0.5" id="l6y-lN-vks"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyx-Qq-Bq4">
+                            <rect key="frame" x="15" y="0.0" width="53" height="44"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" name="Color_Purple_Join"/>
+                            </state>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="8Hl-bk-1bE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxQ-nc-v26">
+                            <rect key="frame" x="319" y="0.0" width="41" height="44"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" name="Color_Purple_Join"/>
+                            </state>
+                            <connections>
+                                <action selector="doneButtonAction:" destination="-1" eventType="touchUpInside" id="Ffl-oe-oS7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="kxQ-nc-v26" secondAttribute="bottom" id="2Uq-fd-Vbt"/>
+                        <constraint firstItem="kxQ-nc-v26" firstAttribute="top" secondItem="C3T-pD-7tP" secondAttribute="top" id="6cE-kF-sop"/>
+                        <constraint firstAttribute="trailing" secondItem="kxQ-nc-v26" secondAttribute="trailing" constant="15" id="EOc-Mv-Ldx"/>
+                        <constraint firstItem="Tyx-Qq-Bq4" firstAttribute="top" secondItem="C3T-pD-7tP" secondAttribute="top" id="FV6-vs-2tE"/>
+                        <constraint firstItem="Tyx-Qq-Bq4" firstAttribute="leading" secondItem="C3T-pD-7tP" secondAttribute="leading" constant="15" id="HBh-5x-ckM"/>
+                        <constraint firstAttribute="height" constant="44" id="L3c-pA-ws0"/>
+                        <constraint firstAttribute="trailing" secondItem="RfP-YY-THZ" secondAttribute="trailing" id="bxz-cF-nLZ"/>
+                        <constraint firstItem="RfP-YY-THZ" firstAttribute="leading" secondItem="C3T-pD-7tP" secondAttribute="leading" id="qBn-HI-yWb"/>
+                        <constraint firstItem="RfP-YY-THZ" firstAttribute="top" secondItem="C3T-pD-7tP" secondAttribute="top" id="uGz-SM-4pH"/>
+                        <constraint firstAttribute="bottom" secondItem="Tyx-Qq-Bq4" secondAttribute="bottom" id="xIS-0B-ZIU"/>
+                    </constraints>
+                </view>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="KTU-sK-aI3">
+                    <rect key="frame" x="0.0" y="44" width="375" height="216"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <locale key="locale" localeIdentifier="en_US"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                            <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="highlightsToday" value="NO"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="actionChangedDate:" destination="-1" eventType="valueChanged" id="aQp-5d-j3H"/>
+                    </connections>
+                </datePicker>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="C3T-pD-7tP" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="5ei-9p-IFk"/>
+                <constraint firstItem="KTU-sK-aI3" firstAttribute="top" secondItem="C3T-pD-7tP" secondAttribute="bottom" id="J9V-za-pIc"/>
+                <constraint firstAttribute="bottom" secondItem="KTU-sK-aI3" secondAttribute="bottom" id="ah7-OB-U6d"/>
+                <constraint firstAttribute="trailing" secondItem="C3T-pD-7tP" secondAttribute="trailing" id="sDQ-X6-YmK"/>
+                <constraint firstItem="KTU-sK-aI3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="szR-EP-64O"/>
+                <constraint firstItem="C3T-pD-7tP" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="tan-fB-lQ5"/>
+                <constraint firstAttribute="trailing" secondItem="KTU-sK-aI3" secondAttribute="trailing" id="zsO-9u-1Dc"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="47.200000000000003" y="-129.53523238380811"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Color_Purple_Join">
+            <color red="0.32156862745098042" green="0.17647058823529413" blue="0.54117647058823526" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
